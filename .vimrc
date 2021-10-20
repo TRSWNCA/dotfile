@@ -131,24 +131,6 @@ function Run()
 	endif
 endfunction
 
-function Tk()
-  silent :%s/Cache_Block_Bit/CACHE_BLOCK_BIT/g
-  silent :%s/Cache_Block_Size/CACHE_BLOCK_SIZE/g
-  silent :%s/Cache_L1_Cap/CACHE_L1_CAP/g
-  silent :%s/Cache_L1_Way_Bit/CACHE_L1_WAY_BIT/g
-  silent :%s/Cache_L1_Way_Num/CACHE_L1_WAY_NUM/g
-  silent :%s/Cache_L1_Set_Bit/CACHE_L1_SET_BIT/g
-  silent :%s/Cache_L1_Set_Num/CACHE_L1_SET_NUM/g
-  silent :%s/Cache_L2_Cap/CACHE_L2_CAP/g
-  silent :%s/Cache_L2_Way_Bit/CACHE_L2_WAY_BIT/g
-  silent :%s/Cache_L2_Way_Num/CACHE_L2_WAY_NUM/g
-  silent :%s/Cache_L2_Set_Bit/CACHE_L2_SET_BIT/g
-  silent :%s/Cache_L2_Set_Num/CACHE_L2_SET_NUM/g
-  silent :%s/Cache_L2_Way/L2/g
-  silent :%s/Cache_L1_Way/L1/g
-endfunction
-
-
 " WSL yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path
 if executable(s:clip)
