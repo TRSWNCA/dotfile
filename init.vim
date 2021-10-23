@@ -2,15 +2,33 @@
 
 call plug#begin('D:\Softwares\nvim-win64\Neovim\share\nvim\plugged')
 
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"" UI plugins
+Plug 'overcache/NeoSolarized'
+  set termguicolors
+
+Plug 'itchyny/lightline.vim'
+  set laststatus=2
+  let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
+
+Plug 'ryanoasis/vim-devicons'
+  " loading the plugin
+  let g:webdevicons_enable = 1
+  let g:webdevicons_enable_nerdtree = 1
+
+"" File manager
+Plug 'preservim/nerdtree'
+  " Exit Vim if NERDTree is the only window remaining in the only tab.
+  autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+  nnoremap <leader>n :NERDTreeFocus<CR>
+  nnoremap <C-n> :NERDTree<CR>
+  nnoremap <C-t> :NERDTreeToggle<CR>
+  nnoremap <C-f> :NERDTreeFind<CR>
 
 call plug#end()
 
-"Powerline setting
-let g:airline_theme='molokai'
-let g:airline_powerline_fonts = 1
-
+set encoding=UTF-8
 
 " Spaces & tabs
 set tabstop=2	          " number of visual spaces per TAB
@@ -22,7 +40,7 @@ set number              " show line numbers
 set cursorline          " highlight current line
 set wildmenu            " visual autocomplete for command menu
 set shiftwidth=2        " automatic indent space
-set laststatus=2        " for lightline
+colorscheme NeoSolarized
 syntax enable            " enable syntax processing
 filetype indent on      " load filetype-specific indent files
 
@@ -63,6 +81,15 @@ nnoremap <space> <c-w>
 " highlight last inserted text
 nnoremap gV `[v`]
 
+" Coding 
+
+function Compile()
+  if &filetype ==# 'cpp'
+    exec "!g++ % -o %< -g -DLOCAL -Wall -Wextra -Wconversion -std=c++11"
+  endif
+endfunction
+
+map <c-o> : call Compile() <CR>
+
 " vim:foldmethod=marker:foldlevel=0
 "
-
