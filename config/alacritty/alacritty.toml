@@ -1,0 +1,11 @@
+[window]
+padding = { x = 3, y = 3 }
+dynamic_padding = true
+opacity = 0.5
+
+[font]
+normal = { family = "DejaVu Sans Mono", style = "Regular" }
+size = 14
+
+# font pango:DejaVu Sans Mono, WenQuanYi Zen Hei Mono 11
+
