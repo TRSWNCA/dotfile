@@ -16,7 +16,7 @@ exec --no-startup-id termite -e termusic
 exec --no-startup-id picom
 exec --no-startup-id xournalpp
 # Suspend in 60 mins
-exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"
+exec --no-startup-id xautolock -time 360 -locker "systemctl suspend"
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -94,7 +94,8 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+Control+f fullscreen toggle
 
-bindsym $mod+Shift+s exec flameshot gui
+# bindsym $mod+Shift+s exec flameshot gui
+bindsym $mod+Shift+s exec flameshot gui -r | xclip -selection clipboard -t image/png
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
