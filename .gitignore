@@ -48,3 +48,6 @@ node_modules/
 __pycache__/
 *.pyc
 *.pyo
+
+# Vim netrw history
+config/vim/.netrwhist
