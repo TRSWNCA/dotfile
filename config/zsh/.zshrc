@@ -167,6 +167,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 SHOW_LLM_PROMPT=0
 
 askllm() {
