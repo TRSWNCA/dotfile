@@ -123,7 +123,7 @@ export WASI_SDK_PATH='/opt/wasi-sdk'
 alias wasmc="${WASI_SDK_PATH}/bin/clang --sysroot=${WASI_SDK_PATH}/share/wasi-sysroot"
 
 # NVM
-typeset -ga __lazyLoadLabels=(nvm node npm npx pnpm yarn pnpx bun bunx ccr)
+typeset -ga __lazyLoadLabels=(nvm node npm npx pnpm yarn pnpx bun bunx ccr claude codex)
 
 __load-nvm() {
     export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
