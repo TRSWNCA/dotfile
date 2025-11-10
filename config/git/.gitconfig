@@ -3,3 +3,9 @@
 	name = Chen Yichi
 [pull]
 	rebase = true
+[http]
+	proxy = http://127.0.0.1:20171
+[https]
+	proxy = http://127.0.0.1:20171
+[init]
+	defaultBranch = main
