@@ -158,23 +158,39 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+# General
 # for_window [class=".*"] title_format "  <span foreground='$background' background='$primary' font='10'> %class </span><span font='10'>  %title </span>"
 for_window [class="^.*"] border pixel 2
 for_window [window_role="bubble"] floating enable
-for_window [title="图片查看"] floating enable
 for_window [window_role="pop-up"] floating enable
-for_window [class="Alacritty"] floating enable border pixel 0
-for_window [title="进度"] floating enable
-for_window [title="i3switcherX11"] floating enable
-for_window [class="QQ"] floating enable border pixel 0
-for_window [class="Thunar"] floating enable border pixel 0
-for_window [class="wechat" title="微信"] floating enable, resize set 1280 960, move position center
-for_window [class="wechat" title="语音聊天"] floating enable, move position center
-for_window [class="wechat" title="图片和视频"] floating enable, move position center
-for_window [class="wechat" window_type="utility"] floating enable, sticky enable, focus, border pixel 0
-for_window [title="^Figure"] floating enable
-# for_window [title="kd*"] floating enable border pixel 0
 
+# for_window [title="图片查看"] floating enable
+for_window [class="Alacritty"] floating enable border pixel 0
+# for_window [title="进度"] floating enable
+# for_window [title="i3switcherX11"] floating enable
+
+# QQ
+for_window [class="QQ"] floating enable border pixel 0
+
+# File Manaer
+for_window [class="Thunar"] floating enable border pixel 0
+
+# Wechat
+for_window [class="wechat"] floating enable, border pixel 0
+for_window [class="wechat" title="微信"] resize set 1280 960, move position center
+for_window [class="wechat" title="语音聊天"] move position center
+for_window [class="wechat" title="图片和视频"] move position center
+for_window [class="wechat" window_type="utility"] floating enable, sticky enable, focus, border pixel 0
+
+# WPS
+for_window [class="wpp"] floating enable
+
+# Tecent Meeting
+for_window [class="wemeetapp"] floating enable, border pixel 0
+for_window [class="wemeetapp" title="腾讯会议"] floating enable, resize set 1280 960, border pixel 0
+
+# Matplotlib
+for_window [title="^Figure"] floating enable
 
 bar {
     # status_command i3status
