@@ -4,8 +4,8 @@
 [pull]
 	rebase = true
 [http]
-	proxy = http://127.0.0.1:20171
+	proxy = 
 [https]
-	proxy = http://127.0.0.1:20171
+	proxy = 
 [init]
 	defaultBranch = main
