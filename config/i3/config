@@ -192,6 +192,12 @@ for_window [class="wemeetapp" title="腾讯会议"] floating enable, resize set 
 # Matplotlib
 for_window [title="^Figure"] floating enable
 
+# Steam
+for_window [class="steam"] floating enable
+
+# Huawei Cloud Meeting (WeLink)
+for_window [class="huaweicloudmeeting|HuaWeiCloudMeeting"] floating enable
+
 bar {
     # status_command i3status
     mode invisible
