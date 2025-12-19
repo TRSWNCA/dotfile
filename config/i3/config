@@ -25,6 +25,8 @@ exec --no-startup-id xautolock -time 360 -locker "systemctl suspend"
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+exec --no-startup-id dunst --config ~/.config/dunst/dunstrc
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
@@ -45,7 +47,8 @@ tiling_drag modifier titlebar
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec termite
+# bindsym $mod+Return exec termite
+bindsym $mod+Return exec kitty
 bindsym $mod+Shift+Return exec alacritty
 
 # kill focused window
@@ -94,8 +97,8 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+Control+f fullscreen toggle
 
-# bindsym $mod+Shift+s exec flameshot gui
-bindsym $mod+Shift+s exec flameshot gui -r | xclip -selection clipboard -t image/png
+bindsym $mod+Shift+s exec flameshot gui
+# bindsym $mod+Shift+s exec flameshot gui -r | xclip -selection clipboard -t image/png
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -171,6 +174,9 @@ for_window [class="Alacritty"] floating enable border pixel 0
 
 # QQ
 for_window [class="QQ"] floating enable border pixel 0
+
+# Flameshot
+for_window [class="flameshot"] border pixel 0
 
 # File Manaer
 for_window [class="Thunar"] floating enable border pixel 0

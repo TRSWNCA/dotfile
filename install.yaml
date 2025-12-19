@@ -1,0 +1,81 @@
+# Dotfiles Installation Configuration
+# This file defines which configuration files should be symlinked and where
+
+configs:
+  # Polybar configuration
+  - source: polybar
+    target: ~/.config/polybar
+    description: Polybar config
+    type: directory
+
+  # i3 window manager configuration
+  - source: i3
+    target: ~/.config/i3
+    description: i3 config
+    type: directory
+
+  # Zsh shell configuration
+  - source: zsh/.zshrc
+    target: ~/.zshrc
+    description: Zsh config
+    type: file
+
+  # Environment file
+  - source: zsh/.env
+    target: ~/.env
+    description: Environment file
+    type: file
+    optional: true  # Only install if source exists
+
+  # Git configuration
+  - source: git/.gitconfig
+    target: ~/.gitconfig
+    description: Git config
+    type: file
+
+  # Vim/Neovim configuration
+  - source: vim
+    target: ~/.config/nvim
+    description: Neovim config
+    type: directory
+
+  - source: vim
+    target: ~/.vim
+    description: Vim config
+    type: directory
+
+  # Alacritty terminal configuration
+  - source: alacritty
+    target: ~/.config/alacritty
+    description: Alacritty config
+    type: directory
+
+  # Rofi launcher configuration
+  - source: rofi
+    target: ~/.config/rofi
+    description: Rofi config
+    type: directory
+
+  # Compton compositor configuration
+  - source: compton
+    target: ~/.config/compton
+    description: Compton config
+    type: directory
+
+  # Picom compositor configuration
+  - source: picom
+    target: ~/.config/picom
+    description: Picom config
+    type: directory
+
+  # Kitty terminal configuration
+  - source: kitty
+    target: ~/.config/kitty
+    description: Kitty config
+    type: directory
+
+  # Dunst notification daemon configuration
+  - source: dunst
+    target: ~/.config/dunst
+    description: Dunst config
+    type: directory
