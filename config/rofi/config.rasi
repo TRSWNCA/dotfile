@@ -1,0 +1,9 @@
+configuration {
+    show-icons: true;
+    icon-theme: "breeze";
+    run {
+        fallback-icon: "/home/cyc/Pictures/script.png";
+    }
+}
+
+@theme "themes/spotlight.rasi"
