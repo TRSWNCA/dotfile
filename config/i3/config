@@ -8,13 +8,14 @@ font pango:DejaVu Sans Mono, WenQuanYi Zen Hei Mono 11
 exec --no-startup-id dex --autostart --environment i3
 # exec --no-startup-id optimus-manager --switch nvidia
 exec_always --no-startup-id sh ~/.screenlayout/default.sh 
-exec_always --no-startup-id ~/.config/polybar/launch.sh > ~/polybar.log 2>&1
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id fcitx5
-exec_always --no-startup-id nitrogen --set-zoom-fill ~/Pictures/inf.jpeg
-exec --no-startup-id termite -e calcurse
-exec --no-startup-id termite -e termusic
+exec_always --no-startup-id nitrogen --set-zoom-fill ~/Pictures/壁纸/mountains.jpg
+exec --no-startup-id kitty -e calcurse
+exec --no-startup-id kitty -e termusic
 exec --no-startup-id picom
 exec --no-startup-id xournalpp
+
 # Suspend in 60 mins
 exec --no-startup-id xautolock -time 360 -locker "systemctl suspend"
 
@@ -183,13 +184,17 @@ for_window [class="Thunar"] floating enable border pixel 0
 
 # Wechat
 for_window [class="wechat"] floating enable, border pixel 0
-for_window [class="wechat" title="微信"] resize set 1280 960, move position center
+for_window [class="wechat" title="微信"] resize set 1280 960 
+#, move position center
 for_window [class="wechat" title="语音聊天"] move position center
 for_window [class="wechat" title="图片和视频"] move position center
 for_window [class="wechat" window_type="utility"] floating enable, sticky enable, focus, border pixel 0
 
 # WPS
 for_window [class="wpp"] floating enable
+
+# Cherry Studio
+for_window [class="CherryStudio"] floating enable, resize set 1280 960, move position center, border pixel 0
 
 # Tecent Meeting
 for_window [class="wemeetapp"] floating enable, border pixel 0

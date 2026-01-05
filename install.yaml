@@ -79,3 +79,9 @@ configs:
     target: ~/.config/dunst
     description: Dunst config
     type: directory
+
+  # dmscripts configuration
+  - source: dmscripts
+    target: ~/.config/dmscripts
+    description: dmscripts config
+    type: directory

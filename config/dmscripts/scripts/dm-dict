@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Get Queries
+query_word=$(rofi -dmenu -p "dict")
+
+# Execute
+alacritty -e bash -c "kd $query_word; read -n1 -s -r -p 'Press any key to exit...'"
